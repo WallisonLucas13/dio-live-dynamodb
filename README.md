@@ -83,6 +83,14 @@ aws dynamodb query \
     --key-condition-expression "Artist = :artist" \
     --expression-attribute-values  '{":artist":{"S":"Iron Maiden"}}'
 ```
+- Pesquisar itens por album
+
+```
+aws dynamodb query \
+    --table-name Music \
+    --key-condition-expression "Album = :album" \
+    --expression-attribute-values  '{":album":{"S":"Fear of the Dark"}}'
+```
 - Pesquisar item por artista e título da música
 
 ```
